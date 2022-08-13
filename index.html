@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'Outfit', sans-serif;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(217, 54%, 11%);
+    }
+    .card {
+      width: 350px;
+      height: 600px;
+      background: hsl(216, 50%, 16%);
+      border-radius: 20px;
+      display: grid;
+      grid-template-rows: 1fr 1fr 0.4fr;
+      box-sizing: border-box;
+    }
+    .card__logo {
+      width: 100%;
+      padding: 20px;
+      position: relative;
+    }
+    .card__img-logo--hover {
+      position: absolute;
+      left:150px;
+      top: 150px;
+      z-index: 1;
+    }
+    .card__img-logo {
+      box-sizing: border-box;
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+    }
+    .card__img-logo:hover {
+      filter: opacity(0.5) drop-shadow(0 0 0 hsl(178, 100%, 50%)); 
+      cursor: pointer;
+      z-index: 0;
+    }
+    .card__body{
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card__title{
+      color: white;
+      font-size: 1.4em;
+    }
+    .card__title:hover{
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+    .card__content{
+      font-size: 18px;
+      font-weight: 400;
+      color: hsl(215, 51%, 70%);
+    }
+    .card__features{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 1px solid hsl(215, 32%, 27%);
+    }
+    .card__value{
+      display: flex;
+      justify-content: space-between;
+    }
+    .card__value-icon{
+      margin-right: 8px;
+    }
+    .card__value-text{
+      color: hsl(178, 100%, 50%);
+    }
+    .card__time{
+      display: flex;
+      justify-content: space-around;
+    }
+    .card__time-icon{
+      margin-right: 8px;
+    }
+    .card__time-text{
+      color: hsl(215, 51%, 70%);
+    }
+    .card__footer{
+      display: flex;
+      padding: 0 20px;
+      align-items: center;
+    }
+    .card__img-creator{
+      margin-right: 16px;
+      width: 32px;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+    .card__creator{
+      color: hsl(215, 51%, 70%);
+    }
+    .card__creator span{
+      color: white;
+    }
+    .card__creator span:hover{
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+    <div class="card">
+      <div class="card__header">
+        <div class="card__logo">
+          <img src="./images/image-equilibrium.jpg" alt="image" class="card__img-logo">
+          <img src="./images/icon-view.svg" alt="ojo" class="card__img-logo--hover">
+        </div>
+      </div>
+      <div class="card__body">
+        <h1 class="card__title">Equilibrium #3429</h1>
+        <p class="card__content">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="card__features">
+          <div class="card__value">
+            <img src="./images/icon-ethereum.svg" alt="value" class="card__value-icon">
+            <p class="card__value-text">0.041ETH</p>
+          </div>
+          <div class="card__time">
+            <img src="./images/icon-clock.svg" alt="reloj" class="card__time-icon">
+            <p class="card__time-text">3 days left</p>
+          </div>
+        </div>
+      </div>
+      <div class="card__footer">
+        <img src="./images/image-avatar.png" alt="creator" class="card__img-creator">
+        <p class="card__creator">Creation of <span>Jules Wyvern</span></p>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
